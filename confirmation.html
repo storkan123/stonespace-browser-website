@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You're In! - Stonespace Browser</title>
+  <meta name="description" content="Your Stonespace Browser purchase was successful. Get your license key and download the app.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ─── Confirmation Page ─────────────────────────── */
+
+    .confirmation {
+      padding: 140px 24px 60px;
+      text-align: center;
+    }
+
+    .confirmation-inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* Checkmark */
+    .success-icon {
+      width: 80px;
+      height: 80px;
+      background: #22c55e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      animation: scaleIn 0.4s ease;
+    }
+
+    .success-icon svg {
+      width: 40px;
+      height: 40px;
+      stroke: #fff;
+      stroke-width: 3;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    @keyframes scaleIn {
+      0% { transform: scale(0); opacity: 0; }
+      60% { transform: scale(1.15); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .confirmation h1 {
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+      color: #1a1a1a;
+    }
+
+    .confirmation-subtitle {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 48px;
+      line-height: 1.6;
+    }
+
+    /* License Key Box */
+    .license-section {
+      background: #fafafa;
+      border: 1px solid #eee;
+      border-radius: 16px;
+      padding: 36px;
+      margin-bottom: 40px;
+    }
+
+    .license-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+
+    .license-key-box {
+      background: #1a1a1a;
+      border-radius: 12px;
+      padding: 24px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .license-key-text {
+      font-family: 'SF Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
+      font-size: 22px;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 0.08em;
+      word-break: break-all;
+      user-select: all;
+      -webkit-user-select: all;
+      line-height: 1.4;
+    }
+
+    .copy-btn {
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .copy-btn:hover {
+      background: #444;
+    }
+
+    .copy-btn.copied {
+      background: #22c55e;
+    }
+
+    .license-note {
+      font-size: 13px;
+      color: #999;
+    }
+
+    /* No license key fallback */
+    .license-fallback {
+      background: #f8f9fa;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 14px;
+    }
+
+    .license-fallback p {
+      font-size: 16px;
+      color: #444;
+      margin: 0;
+    }
+
+    /* Download + Steps */
+    .setup-steps {
+      text-align: left;
+      margin-bottom: 40px;
+    }
+
+    .setup-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .setup-step:last-child {
+      margin-bottom: 0;
+    }
+
+    .setup-step-num {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      background: #1a1a1a;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .setup-step-content {
+      flex: 1;
+      padding-top: 2px;
+    }
+
+    .setup-step-content h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 6px;
+    }
+
+    .setup-step-content p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .download-btn-wrapper {
+      margin-top: 14px;
+    }
+
+    .download-btn-wrapper .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .download-btn-wrapper .btn svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .system-req {
+      font-size: 12px;
+      color: #999;
+      margin-top: 8px;
+    }
+
+    /* Help bar */
+    .help-bar {
+      background: #fafafa;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 20px 28px;
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    .help-bar p {
+      font-size: 14px;
+      color: #666;
+      margin: 0;
+    }
+
+    .help-bar a {
+      color: #4a9eff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .help-bar a:hover {
+      text-decoration: underline;
+    }
+
+    /* ─── Responsive ─────────────────────────────────── */
+
+    @media (max-width: 600px) {
+      .confirmation {
+        padding: 120px 20px 40px;
+      }
+
+      .confirmation h1 {
+        font-size: 30px;
+      }
+
+      .confirmation-subtitle {
+        font-size: 16px;
+        margin-bottom: 36px;
+      }
+
+      .license-section {
+        padding: 24px 20px;
+      }
+
+      .license-key-box {
+        flex-direction: column;
+        gap: 12px;
+        padding: 20px 16px;
+      }
+
+      .license-key-text {
+        font-size: 17px;
+      }
+
+      .copy-btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .setup-step {
+        gap: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <img src="assets/logo.png" alt="Stonespace Browser" class="nav-logo-img">
+        Stonespace Browser
+      </div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-btn">Back to Home</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Confirmation -->
+  <section class="confirmation">
+    <div class="confirmation-inner">
+
+      <!-- Success Icon -->
+      <div class="success-icon">
+        <svg viewBox="0 0 24 24">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+
+      <h1>You're in!</h1>
+      <p class="confirmation-subtitle">Your purchase was successful. Here's everything you need to get started.</p>
+
+      <!-- License Key -->
+      <div class="license-section">
+        <div class="license-label">Your License Key</div>
+
+        <div id="license-has-key">
+          <div class="license-key-box">
+            <span class="license-key-text" id="license-key-display"></span>
+            <button class="copy-btn" id="copy-btn" onclick="copyKey()">Copy</button>
+          </div>
+          <p class="license-note">You'll also receive this key in your email.</p>
+        </div>
+
+        <div id="license-no-key" style="display: none;">
+          <div class="license-fallback">
+            <p>Check your email for your license key. It should arrive within a few minutes.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Setup Steps -->
+      <div class="setup-steps">
+
+        <div class="setup-step">
+          <div class="setup-step-num">1</div>
+          <div class="setup-step-content">
+            <h3>Download the app</h3>
+            <p>Grab the latest version of Stonespace Browser for macOS.</p>
+            <div class="download-btn-wrapper">
+              <a href="#" class="btn btn-primary">
+                <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Download for macOS
+              </a>
+              <p class="system-req">macOS only. Requires macOS 13 or later.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="setup-step">
+          <div class="setup-step-num">2</div>
+          <div class="setup-step-content">
+            <h3>Install</h3>
+            <p>Open the .dmg file and drag Stonespace Browser to your Applications folder.</p>
+          </div>
+        </div>
+
+        <div class="setup-step">
+          <div class="setup-step-num">3</div>
+          <div class="setup-step-content">
+            <h3>Enter your key</h3>
+            <p>Open Stonespace Browser and paste your license key when prompted. That's it — you're all set.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Help -->
+      <div class="help-bar">
+        <p>Need help? Reach out anytime — <a href="mailto:support@stonespacebrowser.com">support@stonespacebrowser.com</a></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="section-inner">
+      <p>&copy; 2026 Stonespace Browser. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Read license key from URL
+    const params = new URLSearchParams(window.location.search);
+    const licenseKey = params.get('license_key');
+
+    const hasKeyEl = document.getElementById('license-has-key');
+    const noKeyEl = document.getElementById('license-no-key');
+    const keyDisplay = document.getElementById('license-key-display');
+
+    if (licenseKey && licenseKey.trim() !== '') {
+      hasKeyEl.style.display = 'block';
+      noKeyEl.style.display = 'none';
+      keyDisplay.textContent = licenseKey.trim();
+    } else {
+      hasKeyEl.style.display = 'none';
+      noKeyEl.style.display = 'block';
+    }
+
+    // Copy to clipboard
+    function copyKey() {
+      const key = keyDisplay.textContent;
+      const btn = document.getElementById('copy-btn');
+
+      navigator.clipboard.writeText(key).then(() => {
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = 'Copy';
+          btn.classList.remove('copied');
+        }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const textarea = document.createElement('textarea');
+        textarea.value = key;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = 'Copy';
+          btn.classList.remove('copied');
+        }, 2000);
+      });
+    }
+  </script>
+
+</body>
+</html>
