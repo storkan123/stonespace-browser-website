@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stonespace Browser - A floating browser that stays on top of everything</title>
+  <meta name="description" content="Stonespace Browser is a floating, always-on-top browser for macOS. Browse while you work. Keyboard shortcuts, bookmarks, screenshot tools.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <img src="assets/logo.png" alt="Stonespace Browser" class="nav-logo-img">
+        Stonespace Browser
+      </div>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#help" class="nav-link-help">Help</a>
+        <a href="#" class="nav-btn open-registration">Download</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>A floating browser that stays on top of <em>everything</em></h1>
+        <p class="hero-sub">Browse the web while you work. Stonespace Browser floats above all your apps, always one shortcut away. Open it, use it, hide it. Never lose focus.</p>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary open-registration">Get Stonespace Browser</a>
+          <a href="#how-it-works" class="btn btn-ghost">See how it works</a>
+        </div>
+      </div>
+
+      <div class="hero-macbook">
+        <video id="demo-video" class="hero-video" muted loop playsinline>
+          <source src="assets/hero-demo.mp4" type="video/mp4">
+        </video>
+
+        <!-- Floating shortcut indicator -->
+        <div class="shortcut-badge" id="shortcut-badge">
+          <span class="kbd">&#8984;</span> + <span class="kbd">3</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <div class="section-inner">
+      <h2>Everything you need in a floating browser</h2>
+      <p class="section-sub">Simple, fast, and always where you need it.</p>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">&#8679;</div>
+          <h3>Always On Top</h3>
+          <p>Stays above every window on your screen. Even fullscreen apps and lockdown software can't hide it.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#8984;</div>
+          <h3>Keyboard Shortcuts</h3>
+          <p>One shortcut to show or hide the browser. Customizable to whatever key combo you prefer.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#9733;</div>
+          <h3>Bookmarks Bar</h3>
+          <p>Quick-access bookmarks with icons at the top. ChatGPT, Google, or any site you use constantly.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#9744;</div>
+          <h3>Screenshot to Clipboard</h3>
+          <p>Capture your entire screen and copy it to clipboard with one shortcut. Paste anywhere instantly.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#127760;</div>
+          <h3>Every Desktop</h3>
+          <p>Shows up on every macOS desktop and space. Switch between desktops and it follows you.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#9881;</div>
+          <h3>Customizable</h3>
+          <p>Adjust opacity, change shortcuts, set your default URL. Make it work the way you want.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="section-inner">
+      <h2>Up and running in 2 minutes</h2>
+      <p class="section-sub">Three steps. That's it.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Buy a license</h3>
+          <p>Grab a license key below. One key works on up to 3 computers.</p>
+        </div>
+        <div class="step-arrow">&rarr;</div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Download the app</h3>
+          <p>Download the .dmg, drag Stonespace Browser to your Applications folder.</p>
+        </div>
+        <div class="step-arrow">&rarr;</div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Enter your key</h3>
+          <p>Open the app, paste your license key, and you're in. Takes 10 seconds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="pricing" id="pricing">
+    <div class="section-inner">
+      <h2>Simple pricing</h2>
+      <p class="section-sub">Start with a <span class="trial-days">14</span>-day free trial. Cancel anytime.</p>
+
+      <div class="pricing-card">
+        <div class="pricing-trial-badge"><span class="trial-days">14</span> days free</div>
+        <div class="pricing-header">
+          <h3>Stonespace Browser</h3>
+          <div class="pricing-amount">
+            <span class="price price-value">$9.99</span>
+            <span class="price-period">/month</span>
+          </div>
+          <p class="pricing-trial-note">after <span class="trial-days">14</span>-day free trial</p>
+        </div>
+        <ul class="pricing-features">
+          <li>Always-on-top floating browser</li>
+          <li>Bookmarks bar with custom icons</li>
+          <li>Screenshot to clipboard</li>
+          <li>All future updates included</li>
+          <li>Cancel anytime</li>
+        </ul>
+        <a href="#" class="btn btn-primary btn-full open-registration">Start Free Trial</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="section-inner">
+      <h2>Questions</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>Is this macOS only?</h3>
+          <p>Yes. Stonespace Browser is built for macOS 13 (Ventura) and later. No Windows or Linux version at this time.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I use it on multiple computers?</h3>
+          <p>Each license is locked to one computer. If you get a new machine, deactivate from the old one first, then activate on the new one.</p>
+        </div>
+        <div class="faq-item">
+          <h3>I get a warning about "Apple cannot verify this app"</h3>
+          <p>Right-click the app and choose "Open" the first time. macOS will remember your choice and open it normally after that.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do I need internet to use it?</h3>
+          <p>The browser needs internet to load websites, obviously. The license check happens once a day and works offline for up to 14 days.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I get a refund?</h3>
+          <p>Yes, within 14 days of purchase if it doesn't work for you. Contact us and we'll sort it out.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Help -->
+  <section class="help" id="help">
+    <div class="section-inner">
+      <h2>Need help?</h2>
+      <p class="section-sub">Send us a message and we'll get back to you as soon as possible.</p>
+
+      <div class="help-card">
+        <form id="help-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="help-name">Your Name <span class="required">*</span></label>
+              <input type="text" id="help-name" name="name" required placeholder="John Doe">
+            </div>
+            <div class="form-group">
+              <label for="help-email">Your Email <span class="required">*</span></label>
+              <input type="email" id="help-email" name="email" required placeholder="john@example.com">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="help-category">What do you need help with? <span class="required">*</span></label>
+            <select id="help-category" name="category" required>
+              <option value="" disabled selected>Select a category</option>
+              <option value="Installation">Installation issue</option>
+              <option value="License">License or activation</option>
+              <option value="Bug">Something isn't working</option>
+              <option value="Billing">Billing or subscription</option>
+              <option value="Feature Request">Feature request</option>
+              <option value="Refund">Refund request</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="help-message">Message <span class="required">*</span></label>
+            <textarea id="help-message" name="message" required placeholder="Describe your issue or question..." rows="5"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full help-submit" id="help-submit-btn">Send Message</button>
+        </form>
+
+        <div class="help-success" id="help-success" style="display: none;">
+          <div class="help-success-icon">&#10003;</div>
+          <h3>Message sent!</h3>
+          <p>Your ticket number is <strong id="help-ticket-display"></strong></p>
+          <p class="help-success-note">We'll get back to you by email. Save your ticket number for reference.</p>
+          <button class="btn btn-ghost" id="help-send-another">Send another message</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration Modal -->
+  <div class="modal-overlay" id="registration-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <h2 class="modal-title">Start Your Free Trial</h2>
+      <p class="modal-subtitle">Fill in your info and we'll take you to checkout.</p>
+
+      <form id="registration-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="reg-first-name">First Name <span class="required">*</span></label>
+            <input type="text" id="reg-first-name" name="firstName" required placeholder="John">
+          </div>
+          <div class="form-group">
+            <label for="reg-last-name">Last Name <span class="required">*</span></label>
+            <input type="text" id="reg-last-name" name="lastName" required placeholder="Doe">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-email">Email <span class="required">*</span></label>
+          <input type="email" id="reg-email" name="email" required placeholder="john@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="reg-phone">Phone Number <span class="required">*</span></label>
+          <input type="tel" id="reg-phone" name="phone" required placeholder="(555) 123-4567">
+        </div>
+
+        <div class="form-group">
+          <label for="reg-occupation">Occupation <span class="required">*</span></label>
+          <select id="reg-occupation" name="occupation" required>
+            <option value="" disabled selected>Select your occupation</option>
+            <option value="Student">Student</option>
+            <option value="Teacher/Professor">Teacher/Professor</option>
+            <option value="Software Developer">Software Developer</option>
+            <option value="Designer">Designer</option>
+            <option value="Business Owner">Business Owner</option>
+            <option value="Freelancer">Freelancer</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group" id="school-group" style="display: none;">
+          <label for="reg-school">School <span class="required">*</span></label>
+          <div class="school-autocomplete">
+            <input type="text" id="reg-school" name="school" placeholder="Start typing your school name..." autocomplete="off">
+            <ul class="school-dropdown" id="school-dropdown"></ul>
+          </div>
+        </div>
+
+        <div class="form-group form-group-checkbox">
+          <label class="checkbox-label">
+            <input type="checkbox" id="reg-terms" name="terms" required>
+            <span>I agree to the <a href="terms.html" target="_blank">Terms and Conditions</a> <span class="required">*</span></span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full modal-submit">Continue to Checkout</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="section-inner">
+      <p>&copy; 2026 Stonespace Browser. All rights reserved. · <a href="terms.html" style="color: #999; text-decoration: underline;">Terms and Conditions</a> · <a href="#help" style="color: #999; text-decoration: underline;">Help</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // =====================================================
+    // CHANGE PRICE HERE — update this value when you
+    // change the price on LemonSqueezy. This is the ONLY
+    // place in the entire page where the price is set.
+    // All "$X.XX" and "X days free" text on the page
+    // pulls from these two variables automatically.
+    // =====================================================
+    const PRODUCT_PRICE = '9.99';
+    const TRIAL_DAYS = 14;
+
+    // Fill in all price and trial-day placeholders
+    document.querySelectorAll('.price-value').forEach(el => {
+      el.textContent = '$' + PRODUCT_PRICE;
+    });
+    document.querySelectorAll('.trial-days').forEach(el => {
+      el.textContent = TRIAL_DAYS;
+    });
+  </script>
+
+  <script>
+    // Video playback + keyboard animation sync
+    const video = document.getElementById('demo-video');
+    const badge = document.getElementById('shortcut-badge');
+
+    const OPEN_TIME = 2.0;
+    const CLOSE_TIME = 13.0;
+    const BADGE_DURATION = 2500; // ms — how long the badge stays visible
+
+    function highlightKeys() {
+      badge.classList.add('visible');
+      setTimeout(() => {
+        badge.classList.remove('visible');
+      }, BADGE_DURATION);
+    }
+
+    let openFired = false;
+    let closeFired = false;
+
+    video.addEventListener('timeupdate', () => {
+      const t = video.currentTime;
+
+      if (t >= OPEN_TIME && t < OPEN_TIME + 0.5 && !openFired) {
+        openFired = true;
+        highlightKeys();
+      }
+
+      if (t >= CLOSE_TIME && t < CLOSE_TIME + 0.5 && !closeFired) {
+        closeFired = true;
+        highlightKeys();
+      }
+
+      // Reset flags when video loops
+      if (t < 1) {
+        openFired = false;
+        closeFired = false;
+      }
+    });
+
+    // Auto-play video when it's in view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+    }, { threshold: 0.3 });
+
+    observer.observe(video);
+
+    // Smooth scroll for nav links (skip registration popup buttons)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      if (anchor.classList.contains('open-registration')) return;
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+  <script>
+    // =====================================================
+    // Registration Modal
+    // =====================================================
+
+    const CHECKOUT_BASE_URL = 'https://stonespacebrowser.lemonsqueezy.com/checkout/buy/269be600-1c07-4f75-b6a8-9660ef250c9c';
+
+    // --- School list (US colleges + major high schools) ---
+    const SCHOOLS = [
+      // Ivy League
+      "Harvard University","Yale University","Princeton University","Columbia University",
+      "University of Pennsylvania","Brown University","Dartmouth College","Cornell University",
+      // Top National Universities
+      "Massachusetts Institute of Technology (MIT)","Stanford University","California Institute of Technology (Caltech)",
+      "University of Chicago","Duke University","Northwestern University","Johns Hopkins University",
+      "Rice University","Vanderbilt University","Washington University in St. Louis","Emory University",
+      "Georgetown University","University of Notre Dame","Carnegie Mellon University","University of Virginia",
+      "Wake Forest University","University of Michigan","University of Southern California (USC)",
+      "New York University (NYU)","Tufts University","University of North Carolina at Chapel Hill",
+      "Boston College","Boston University","University of Rochester","Brandeis University",
+      "Case Western Reserve University","Georgia Institute of Technology (Georgia Tech)",
+      "University of Florida","University of Texas at Austin","University of Wisconsin-Madison",
+      "University of Illinois Urbana-Champaign","Ohio State University","Penn State University",
+      "Purdue University","University of Washington","University of Maryland","Indiana University Bloomington",
+      "University of Minnesota","Michigan State University","University of Iowa","University of Colorado Boulder",
+      "University of Oregon","University of Arizona","Arizona State University","University of Pittsburgh",
+      "Rutgers University","University of Connecticut","Virginia Tech","Texas A&M University",
+      "University of Georgia","University of South Carolina","University of Tennessee",
+      "University of Alabama","University of Kentucky","University of Arkansas","University of Kansas",
+      "University of Oklahoma","University of Nebraska","University of Missouri","Iowa State University",
+      "Oregon State University","Washington State University","Colorado State University",
+      "North Carolina State University","Florida State University","University of Central Florida",
+      "University of South Florida","Florida International University",
+      // UC System
+      "UCLA","UC Berkeley","UC San Diego","UC Davis","UC Santa Barbara","UC Irvine",
+      "UC Santa Cruz","UC Riverside","UC Merced",
+      // CSU System
+      "San Diego State University","San Jose State University","Cal Poly San Luis Obispo",
+      "Cal Poly Pomona","Sacramento State University","San Francisco State University",
+      "Long Beach State University","Fresno State University","Cal State Fullerton",
+      "Cal State Northridge","Cal State Los Angeles",
+      // SUNY/CUNY
+      "Stony Brook University (SUNY)","University at Buffalo (SUNY)","Binghamton University (SUNY)",
+      "University at Albany (SUNY)","CUNY Baruch College","CUNY Hunter College","CUNY City College",
+      "CUNY Brooklyn College","CUNY Queens College",
+      // Liberal Arts
+      "Williams College","Amherst College","Swarthmore College","Pomona College","Wellesley College",
+      "Bowdoin College","Middlebury College","Claremont McKenna College","Carleton College",
+      "Hamilton College","Haverford College","Colby College","Harvey Mudd College",
+      "Grinnell College","Davidson College","Colgate University","Wesleyan University",
+      "Bates College","Colorado College","Oberlin College","Smith College","Barnard College",
+      "Vassar College","Bryn Mawr College","Scripps College","Reed College",
+      // HBCUs
+      "Howard University","Spelman College","Morehouse College","Hampton University",
+      "Tuskegee University","Florida A&M University","North Carolina A&T","Xavier University of Louisiana",
+      // Other Notables
+      "Northeastern University","Villanova University","Santa Clara University","Loyola Marymount University",
+      "Gonzaga University","Creighton University","George Washington University","American University",
+      "Syracuse University","University of Denver","Tulane University","Lehigh University",
+      "Pepperdine University","Southern Methodist University (SMU)","Texas Christian University (TCU)",
+      "Baylor University","Brigham Young University (BYU)","University of Miami",
+      "Clemson University","Auburn University","University of Mississippi (Ole Miss)",
+      "Louisiana State University (LSU)","University of Utah","University of Nevada, Las Vegas (UNLV)",
+      "University of Hawaii at Manoa","University of New Mexico","University of Idaho",
+      "University of Wyoming","University of Montana","University of North Dakota",
+      "University of South Dakota","University of Vermont","University of Maine",
+      "University of New Hampshire","University of Rhode Island","University of Delaware",
+      // Community Colleges (major ones)
+      "Miami Dade College","Houston Community College","Lone Star College",
+      "Northern Virginia Community College (NOVA)","Austin Community College",
+      "Santa Monica College","Pasadena City College","De Anza College","Diablo Valley College",
+      "Orange Coast College","Glendale Community College","Mesa Community College",
+      "Maricopa Community Colleges","Valencia College","Broward College",
+      "Community College of Philadelphia","Montgomery College",
+      // Major High Schools
+      "Thomas Jefferson High School for Science and Technology","Stuyvesant High School",
+      "Bronx High School of Science","Brooklyn Technical High School",
+      "Phillips Academy Andover","Phillips Exeter Academy","Deerfield Academy",
+      "Choate Rosemary Hall","Lawrenceville School","Hotchkiss School",
+      "St. Paul's School","Milton Academy","Groton School","Middlesex School",
+      "Loomis Chaffee School","Peddie School","Westminster School","Cate School",
+      "Thacher School","Lakeside School",
+      // Other — typed manually by user
+    ];
+
+    // --- DOM refs ---
+    const modal = document.getElementById('registration-modal');
+    const modalCloseBtn = document.getElementById('modal-close');
+    const regForm = document.getElementById('registration-form');
+    const occupationSelect = document.getElementById('reg-occupation');
+    const schoolGroup = document.getElementById('school-group');
+    const schoolInput = document.getElementById('reg-school');
+    const schoolDropdown = document.getElementById('school-dropdown');
+
+    // --- Open modal ---
+    document.querySelectorAll('.open-registration').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    // --- Close modal ---
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    modalCloseBtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+    });
+
+    // --- Show/hide school field based on occupation ---
+    occupationSelect.addEventListener('change', function() {
+      if (this.value === 'Student') {
+        schoolGroup.style.display = 'block';
+        schoolInput.setAttribute('required', '');
+      } else {
+        schoolGroup.style.display = 'none';
+        schoolInput.removeAttribute('required');
+        schoolInput.value = '';
+      }
+    });
+
+    // --- School autocomplete ---
+    let schoolFocused = false;
+
+    schoolInput.addEventListener('input', function() {
+      const query = this.value.trim().toLowerCase();
+      schoolDropdown.innerHTML = '';
+
+      if (query.length < 2) {
+        schoolDropdown.style.display = 'none';
+        return;
+      }
+
+      const matches = SCHOOLS.filter(s => s.toLowerCase().includes(query)).slice(0, 8);
+
+      if (matches.length === 0) {
+        schoolDropdown.style.display = 'none';
+        return;
+      }
+
+      matches.forEach(school => {
+        const li = document.createElement('li');
+        li.textContent = school;
+        li.addEventListener('mousedown', function(e) {
+          e.preventDefault();
+          schoolInput.value = school;
+          schoolDropdown.style.display = 'none';
+        });
+        schoolDropdown.appendChild(li);
+      });
+
+      schoolDropdown.style.display = 'block';
+    });
+
+    schoolInput.addEventListener('focus', function() {
+      schoolFocused = true;
+    });
+
+    schoolInput.addEventListener('blur', function() {
+      schoolFocused = false;
+      setTimeout(() => {
+        if (!schoolFocused) schoolDropdown.style.display = 'none';
+      }, 200);
+    });
+
+    // --- Help form ---
+    const helpForm = document.getElementById('help-form');
+    const helpSuccess = document.getElementById('help-success');
+    const helpTicketDisplay = document.getElementById('help-ticket-display');
+    const helpSubmitBtn = document.getElementById('help-submit-btn');
+
+    function generateTicketNumber() {
+      const timestamp = Date.now().toString(36).toUpperCase();
+      const random = Math.floor(Math.random() * 9000 + 1000);
+      return 'SS-' + timestamp + '-' + random;
+    }
+
+    document.getElementById('help-send-another').addEventListener('click', function() {
+      helpSuccess.style.display = 'none';
+      helpForm.style.display = 'block';
+      helpForm.reset();
+    });
+
+    helpForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('help-name').value.trim();
+      const email = document.getElementById('help-email').value.trim();
+      const category = document.getElementById('help-category').value;
+      const message = document.getElementById('help-message').value.trim();
+
+      // Clear previous errors
+      helpForm.querySelectorAll('.form-error').forEach(el => el.remove());
+      helpForm.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
+
+      let hasError = false;
+
+      function showHelpError(inputId, msg) {
+        hasError = true;
+        const input = document.getElementById(inputId);
+        input.classList.add('input-error');
+        const err = document.createElement('span');
+        err.className = 'form-error';
+        err.textContent = msg;
+        input.parentNode.appendChild(err);
+      }
+
+      if (!name) showHelpError('help-name', 'Name is required');
+      if (!email) {
+        showHelpError('help-email', 'Email is required');
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showHelpError('help-email', 'Please enter a valid email');
+      }
+      if (!category) showHelpError('help-category', 'Please select a category');
+      if (!message) showHelpError('help-message', 'Message is required');
+
+      if (hasError) return;
+
+      const ticketNumber = generateTicketNumber();
+
+      // Disable button while sending
+      helpSubmitBtn.disabled = true;
+      helpSubmitBtn.textContent = 'Sending...';
+
+      const HELP_WEBHOOK = 'https://script.google.com/macros/s/AKfycbyLa66Qsd2FAJFiQ0IK4mr2AFqhK3u2bsH7CyrIun2P2wiC9p0202hPXzMaw9oYuY2f/exec';
+
+      const params = new URLSearchParams({
+        ticketNumber: ticketNumber,
+        name: name,
+        email: email,
+        category: category,
+        message: message,
+        timestamp: new Date().toISOString()
+      });
+
+      fetch(HELP_WEBHOOK + '?' + params.toString(), {
+        method: 'GET',
+        mode: 'no-cors'
+      }).then(() => {
+        helpForm.style.display = 'none';
+        helpTicketDisplay.textContent = ticketNumber;
+        helpSuccess.style.display = 'block';
+        helpSubmitBtn.disabled = false;
+        helpSubmitBtn.textContent = 'Send Message';
+      }).catch(() => {
+        helpForm.style.display = 'none';
+        helpTicketDisplay.textContent = ticketNumber;
+        helpSuccess.style.display = 'block';
+        helpSubmitBtn.disabled = false;
+        helpSubmitBtn.textContent = 'Send Message';
+      });
+    });
+
+    // --- Form submission ---
+    regForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Validate all required fields
+      const firstName = document.getElementById('reg-first-name').value.trim();
+      const lastName = document.getElementById('reg-last-name').value.trim();
+      const email = document.getElementById('reg-email').value.trim();
+      const phone = document.getElementById('reg-phone').value.trim();
+      const occupation = occupationSelect.value;
+      const school = schoolInput.value.trim();
+
+      // Clear previous errors
+      regForm.querySelectorAll('.form-error').forEach(el => el.remove());
+      regForm.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
+
+      let hasError = false;
+
+      function showError(inputId, message) {
+        hasError = true;
+        const input = document.getElementById(inputId);
+        input.classList.add('input-error');
+        const err = document.createElement('span');
+        err.className = 'form-error';
+        err.textContent = message;
+        input.parentNode.appendChild(err);
+      }
+
+      if (!firstName) showError('reg-first-name', 'First name is required');
+      if (!lastName) showError('reg-last-name', 'Last name is required');
+      if (!email) {
+        showError('reg-email', 'Email is required');
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showError('reg-email', 'Please enter a valid email');
+      }
+      if (!phone) showError('reg-phone', 'Phone number is required');
+      if (!occupation) showError('reg-occupation', 'Please select an occupation');
+      if (occupation === 'Student' && !school) showError('reg-school', 'School is required for students');
+
+      // Terms checkbox validation
+      const termsCheckbox = document.getElementById('reg-terms');
+      if (!termsCheckbox.checked) {
+        hasError = true;
+        termsCheckbox.classList.add('input-error');
+        const err = document.createElement('span');
+        err.className = 'form-error';
+        err.textContent = 'You must agree to the Terms and Conditions';
+        termsCheckbox.closest('.form-group-checkbox').appendChild(err);
+      }
+
+      if (hasError) return;
+
+      // Collect data
+      const registrationData = {
+        firstName,
+        lastName,
+        email,
+        phone,
+        occupation,
+        school: occupation === 'Student' ? school : '',
+        timestamp: new Date().toISOString()
+      };
+
+      // Send to Google Sheet via Google Apps Script (GET request with query params)
+      const GOOGLE_SHEET_WEBHOOK = 'https://script.google.com/macros/s/AKfycbxB14HbKHO866CBmndNRhrYyQhZ6KNUTDUpdm4UpE3ySt8cpIuSFhPCHZlokXdYLQNP/exec';
+
+      const params = new URLSearchParams({
+        firstName: registrationData.firstName,
+        lastName: registrationData.lastName,
+        email: registrationData.email,
+        phone: registrationData.phone,
+        occupation: registrationData.occupation,
+        school: registrationData.school || '',
+        timestamp: registrationData.timestamp
+      });
+
+      fetch(GOOGLE_SHEET_WEBHOOK + '?' + params.toString(), {
+        method: 'GET',
+        mode: 'no-cors'
+      }).catch(() => {});
+
+      // Redirect to LemonSqueezy checkout with email pre-filled
+      const checkoutUrl = CHECKOUT_BASE_URL + '?checkout[email]=' + encodeURIComponent(email);
+      window.location.href = checkoutUrl;
+    });
+  </script>
+
+</body>
+</html>
